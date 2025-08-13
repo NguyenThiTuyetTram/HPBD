@@ -1,0 +1,93 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+}
+
+#heartCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.card {
+    position: relative;
+    margin-top: 10%;
+    background: rgba(255, 192, 203, 0.8);
+    padding: 20px;
+    border-radius: 20px;
+    display: inline-block;
+    backdrop-filter: blur(5px);
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Tiêu đề phát sáng neon */
+h1 {
+    font-family: 'Rubik Moonrocks', cursive;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #ff4ec4;
+    text-shadow:
+        0 0 5px #fff,
+        0 0 10px #ff66d9,
+        0 0 20px #ff99e6,
+        0 0 40px #ffccf2;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+/* Câu chúc chữ viết tay */
+.wish {
+    font-family: 'Pacifico', cursive;
+    font-size: 1.5em;
+    color: #fff7ae;
+    margin-bottom: 20px;
+    text-shadow:
+        0 0 5px #ff4ec4,
+        0 0 10px #ff99e6;
+}
+
+/* Bánh kem nổi bật */
+.cake {
+    font-family: 'Pacifico', cursive;
+    font-size: 1.3em;
+    color: #ffeb3b;
+    background: rgba(0, 0, 0, 0.5);
+    display: inline-block;
+    padding: 15px;
+    border-radius: 15px;
+    text-shadow: 0 0 5px #fff;
+}
+
+.birthday-img {
+    width: 150px; 
+    height: auto;
+    border-radius: 15px;
+    margin: 10px 0;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes glow {
+    from {
+        text-shadow:
+            0 0 5px #fff,
+            0 0 10px #ff66d9,
+            0 0 20px #ff99e6,
+            0 0 40px #ffccf2;
+    }
+    to {
+        text-shadow:
+            0 0 10px #fff,
+            0 0 20px #ff66d9,
+            0 0 30px #ff99e6,
+            0 0 50px #ffccf2;
+    }
+}
